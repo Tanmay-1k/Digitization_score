@@ -56,13 +56,6 @@ weights = {
     "Digital Banking & Transformation": 1
 }
 
-# Folder path
-folder_path = r"C:\Users\Tanmay\Desktop\bank reports"
-
-# Check if folder exists
-if not os.path.exists(folder_path):
-    exit()
-
 # Function to extract text from PDF
 def extract_text_from_pdf(pdf_path):
     try:
@@ -107,22 +100,3 @@ def compute_digitization_score(text, keywords, weights):
     total_normalized_score = round(total_normalized_score, 2)
     return total_normalized_score, category_details
 
-# Process reports
-def process_bank_reports(folder_path):
-    data = []
-    
-    
-    for filename in os.listdir(folder_path):
-        if filename.endswith(".pdf"):
-            pdf_path = os.path.join(folder_path, filename)
-            text = extract_text_from_pdf(pdf_path)
-            
-            if text:
-                bank_name = filename.split("_")[0]
-                total_score, category_details = compute_digitization_score(text, keywords, weights)
-                
-                # Simple row for CSV
-                data.append({"FY": "2024-2025", "Name of Bank": bank_name, "Digitization Score": total_score})
-                
-                # Detailed output in Python console
-    return pd.DataFrame(data) if data else None
