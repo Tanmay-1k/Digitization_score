@@ -47,12 +47,12 @@ keywords = {
 }
 
 weights = {
-    "Artificial Intelligence (AI) & Machine Learning (ML)": 5,
-    "Blockchain Technology": 4,
-    "Cloud Computing & Infrastructure": 3,
-    "Big Data & Analytics": 3,
-    "Digital Technology Applications": 2,
-    "Cybersecurity & Compliance": 2,
+    "Artificial Intelligence (AI) & Machine Learning (ML)": 1,
+    "Blockchain Technology": 1,
+    "Cloud Computing & Infrastructure": 1,
+    "Big Data & Analytics": 1,
+    "Digital Technology Applications": 1,
+    "Cybersecurity & Compliance": 1,
     "Digital Banking & Transformation": 1
 }
 
